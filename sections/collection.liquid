@@ -10,11 +10,11 @@
     grid-template-columns: repeat(auto-fill, minmax(255px, 1fr));
 }
   </style>
+  {% assign products = collection.products | sort: 'price' %}
 <h1>{{ collection.title }}</h1>
-{{ collection.sort_by }}
 <div class="collection-products">
   {% paginate collection.products by 5 %}
-    {% for product in collection.products %}
+ {% for product in products %}
       <div class="collection-product">
         {% if product.featured_image %}
           {% render 'image',
