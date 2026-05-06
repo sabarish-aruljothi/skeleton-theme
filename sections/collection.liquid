@@ -33,7 +33,7 @@
       </div>
     {% endfor %}
 
-    {{ paginate | json }}
+    {{ paginate | default }}
   {% endpaginate %}
 </div>
 
