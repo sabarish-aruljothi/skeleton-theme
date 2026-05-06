@@ -11,7 +11,7 @@
 }
   </style>
 <h1>{{ collection.title }}</h1>
-
+{{ collection.url | sort_by: 'best-selling' }}
 <div class="collection-products">
   {% paginate collection.products by 5 %}
     {% for product in collection.products %}
