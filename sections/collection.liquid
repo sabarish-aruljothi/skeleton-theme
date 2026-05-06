@@ -4,7 +4,12 @@
 
   https://shopify.dev/docs/storefronts/themes/architecture/templates/collection
 {% endcomment %}
-
+<style>
+.collection-products {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(255px, 1fr));
+}
+  </style>
 <h1>{{ collection.title }}</h1>
 
 <div class="collection-products">
