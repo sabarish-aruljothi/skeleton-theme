@@ -32,6 +32,11 @@
           <p>{{ item.title }}</p>
           {{ 'cart.remove' | t | link_to: item.url_to_remove }}
         </td>
+        <td>
+        <code>[item.price] </code>
+          <p>{{ item.price }}</p>
+          {{ 'cart.remove' | t | link_to: item.url_to_remove }}
+        </td>
            <td>
         <code>[item.product.price] </code>
           <p>{{ item.product.price }}</p>
