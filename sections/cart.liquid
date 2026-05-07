@@ -4,10 +4,15 @@
 
   https://shopify.dev/docs/storefronts/themes/architecture/templates/cart
 {% endcomment %}
+ {% stylesheet %}
+   .cart_page a{max-width: 150px;}
+
+ {% endstylesheet %}
+ 
 
 <h1>{{ 'cart.title' | t }}</h1>
 
-<form action="{{ routes.cart_url }}" method="post">
+<form class="cart_page" action="{{ routes.cart_url }}" method="post">
   <table>
     {% for item in cart.items %}
       <tr>
