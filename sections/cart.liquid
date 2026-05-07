@@ -16,7 +16,7 @@
 
 <form class="cart_page" action="{{ routes.cart_url }}" method="post">
   <table>
-    {{cart.items.product.title | json}}
+    {{cart.product.title | json}}
     {% for item in cart.items %}
       <tr>
         <td>
