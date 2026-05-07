@@ -48,7 +48,33 @@
       </tr>
     {% endfor %}
   </table>
-
+<table>
+   
+      <tr>
+      
+        <td>
+        <code>[cart.item_count] </code>
+          <p>{{ cart.item_count }}</p>
+         
+        </td>
+        <td>
+        <code>[cart.total_price] </code>
+          <p>{{ cart.total_price }}</p>
+         
+        </td>
+        <td>
+        <code>[item.price] </code>
+          <p>{{ item.price }}</p>
+         
+        </td>
+           <td>
+        <code>[item.product.price] </code>
+          <p>{{ item.product.price }}</p>
+        </td>
+        
+      </tr>
+  
+  </table>
   <input type="submit" name="checkout" value="{{ 'cart.checkout' | t }}">
 </form>
 
