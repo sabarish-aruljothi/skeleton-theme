@@ -26,6 +26,10 @@
           <p>{{ item.product.title }}</p>
           {{ 'cart.remove' | t | link_to: item.url_to_remove }}
         </td>
+           <td>
+        <code>[item.product.price] </code>
+          <p>{{ item.product.price }}</p>
+        </td>
         <td>
           <input type="text" name="updates[]" value="{{ item.quantity }}">
           <input type="submit" value="{{ 'cart.update' | t }}">
