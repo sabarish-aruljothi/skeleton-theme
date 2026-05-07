@@ -7,7 +7,7 @@
  {% stylesheet %}
    .cart_page a{max-width: 150px;}
    .cart_page td{border: 1px solid red ;}
-   code{color:forestgreen;font-size: 25px;font-weight: 600;}
+   code{color:forestgreen;font-size: 20px;font-weight: 600;}
 
  {% endstylesheet %}
  
@@ -22,7 +22,7 @@
           {% render 'image', image: item.image, url: item.url %}
         </td>
         <td>
-        <code>item.product.title </code>
+        <code>[item.product.title] </code>
           <p>{{ item.product.title }}</p>
           {{ 'cart.remove' | t | link_to: item.url_to_remove }}
         </td>
