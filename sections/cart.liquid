@@ -67,10 +67,68 @@
           <p>{{ item.price }}</p>
          
         </td>
-           <td>
-        <code>[item.product.price] </code>
-          <p>{{ item.product.price }}</p>
-        </td>
+          <tr>
+  <td>
+    <code>[cart.total_discount]</code>
+    <p>{{ cart.total_discount | money }}</p>
+  </td>
+
+  <td>
+    <code>[cart.original_total_price]</code>
+    <p>{{ cart.original_total_price | money }}</p>
+  </td>
+
+  <td>
+    <code>[cart.total_weight]</code>
+    <p>{{ cart.total_weight | weight_with_unit }}</p>
+  </td>
+
+  <td>
+    <code>[cart.currency]</code>
+    <p>{{ cart.currency }}</p>
+  </td>
+
+  <td>
+    <code>[cart.note]</code>
+    <p>{{ cart.note }}</p>
+  </td>
+
+  <td>
+    <code>[cart.attributes['gift_wrap']]</code>
+    <p>{{ cart.attributes['gift_wrap'] }}</p>
+  </td>
+
+  <td>
+    <code>[cart.discount_codes]</code>
+
+    {% for discount in cart.discount_codes %}
+      <p>
+        Code: {{ discount.code }} <br>
+        Amount: {{ discount.amount | money }}
+      </p>
+    {% endfor %}
+  </td>
+
+  <td>
+    <code>[cart.taxes_included]</code>
+
+    {% if cart.taxes_included %}
+      <p>Taxes Included</p>
+    {% else %}
+      <p>Taxes Not Included</p>
+    {% endif %}
+  </td>
+
+  <td>
+    <code>[cart.requires_shipping]</code>
+
+    {% if cart.requires_shipping %}
+      <p>Shipping Required</p>
+    {% else %}
+      <p>No Shipping Required</p>
+    {% endif %}
+  </td>
+</tr>
         
       </tr>
   
