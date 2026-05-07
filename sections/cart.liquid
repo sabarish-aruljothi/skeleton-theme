@@ -49,79 +49,79 @@
     {% endfor %}
   </table>
 <table>
-   
-      <tr>
-      
-        <td>
-        <code>[cart.item_count] </code>
-          <p>{{ cart.item_count }}</p>
-         
-        </td>
-        
-     <td>
+
+    <tr>
+
+    <td>
+    <code>[cart.item_count] </code>
+    <p>{{ cart.item_count }}</p>
+
+    </td>
+
+    <td>
     <code>[cart.total_discount]</code>
     <p>{{ cart.total_discount | money }}</p>
-  </td>
+    </td>
 
-  <td>
+    <td>
     <code>[cart.original_total_price]</code>
     <p>{{ cart.original_total_price | money }}</p>
-  </td>
+    </td>
 
-  <td>
+    <td>
     <code>[cart.total_weight]</code>
     <p>{{ cart.total_weight | weight_with_unit }}</p>
-  </td>
+    </td>
 
-  <td>
+    <td>
     <code>[cart.currency]</code>
     <p>{{ cart.currency }}</p>
-  </td>
+    </td>
 
-  <td>
+    <td>
     <code>[cart.note]</code>
     <p>{{ cart.note }}</p>
-  </td>
+    </td>
 
-  <td>
+    <td>
     <code>[cart.attributes['gift_wrap']]</code>
     <p>{{ cart.attributes['gift_wrap'] }}</p>
-  </td>
+    </td>
 
-  <td>
+    <td>
     <code>[cart.discount_codes]</code>
 
     {% for discount in cart.discount_codes %}
-      <p>
-        Code: {{ discount.code }} <br>
-        Amount: {{ discount.amount | money }}
-      </p>
+    <p>
+    Code: {{ discount.code }} <br>
+    Amount: {{ discount.amount | money }}
+    </p>
     {% endfor %}
-  </td>
+    </td>
 
-  <td>
+    <td>
     <code>[cart.taxes_included]</code>
 
     {% if cart.taxes_included %}
-      <p>Taxes Included</p>
+    <p>Taxes Included</p>
     {% else %}
-      <p>Taxes Not Included</p>
+    <p>Taxes Not Included</p>
     {% endif %}
-  </td>
+    </td>
 
-  <td>
+    <td>
     <code>[cart.requires_shipping]</code>
 
     {% if cart.requires_shipping %}
-      <p>Shipping Required</p>
+    <p>Shipping Required</p>
     {% else %}
-      <p>No Shipping Required</p>
+    <p>No Shipping Required</p>
     {% endif %}
-  </td>
+    </td>
 
-        
-      </tr>
-  
+
+    </tr>
+
   </table>
   <input type="submit" name="checkout" value="{{ 'cart.checkout' | t }}">
 </form>
