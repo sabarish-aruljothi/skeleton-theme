@@ -5,10 +5,30 @@
 
 <script>
 
- fetch("/cart.js")
-.then(respone=>{
-    console.log(response);
-} )
+console.log("script loaded");
+
+document.querySelector("#cart-btn")
+.addEventListener("click", () => {
+
+    console.log("button clicked");
+
+    fetch("/cart.js")
+    .then(response => {
+        console.log("response received");
+        return response.json();
+    })
+    .then(data => {
+        console.log("cart data");
+        console.log(data);
+    })
+    .catch(error => {
+        console.log("fetch error");
+        console.log(error);
+    });
+
+});
+
+</script>
 
 
 
