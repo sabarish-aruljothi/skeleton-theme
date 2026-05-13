@@ -6,12 +6,12 @@
 <script>
 let btn = document.getElementById("cart-btn");
 btn.addEventListener("click",e=>{
+fetch("/cart.js")
+.then(respone=> respone.json();console.log(respone) )
 
 
 })
-const response = await fetch('/cart.js')
-console.log(response)
-</script>    
+  
 
 {% schema %}
 {
