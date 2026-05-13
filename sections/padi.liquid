@@ -29,8 +29,8 @@ addCart.addEventListener("click",()=>{
 fetch("/cart/add.js",{
 method:"POST",
 
-header:{"content-type":"application/json"}
-body:json.stringify{
+headers:{"Content-Type":"application/json"},
+body:JSON.stringify{
 id:44995416719429,
 quantity:1
 }
