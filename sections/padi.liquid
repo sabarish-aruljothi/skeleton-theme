@@ -2,7 +2,9 @@
 <button id="cart-btn">
   Get Cart
 </button>
-
+<button id="add-cart">
+  Add Product
+</button>
 <script>
 let btn=document.getElementById("cart-btn");
 btn.addEventListener("click",()=>{
@@ -17,7 +19,7 @@ btn.addEventListener("click",()=>{
         console.log(data.item_count)
     })
     .catch(error =>{
-    console.log(error)})
+    console.error(error)})
 
 })
 
