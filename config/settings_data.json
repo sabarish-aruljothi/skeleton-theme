@@ -8,5 +8,9 @@
  * ------------------------------------------------------------
  */
 {
-  "current": {}
+  "current": {
+    "background_color": "#010101",
+    "foreground_color": "#ffffff",
+    "content_for_index": []
+  }
 }
