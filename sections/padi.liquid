@@ -14,9 +14,10 @@ btn.addEventListener("click",()=>{
     } )
     .then(data =>{
         console.log(data);
+        console.log(data.item_count)
     })
-    .catch(errror =>{
-    console.log("fetch error")})
+    .catch(error =>{
+    console.log(error)})
 
 })
 
