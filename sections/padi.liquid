@@ -23,6 +23,18 @@ btn.addEventListener("click",()=>{
 
 })
 
+let addCart=document.getElementById("add-cart");
+addCart.addEventListener("click",()=>{
+fetch("/cart/add.js")
+method="post"
+headers={'content-type:'application/json''}
+body;json.stringfy({
+id:44995416719429})
+})
+
+
+
+
 
 </script>
 
