@@ -26,18 +26,7 @@ btn.addEventListener("click",()=>{
 let addCart=document.getElementById("add-cart");
 addCart.addEventListener("click",()=>{
     console.log("button clicked")
-fetch("/cart/add.js",{
-method:"POST",
 
-header:{"content-type:"application/json""}
-body:json.stringify{
-id:44995416719429,
-quantity:1
-}
-
-})
-.then(respone => respone.json();)
-.catch(error => console.error(error))
 
 })
 
