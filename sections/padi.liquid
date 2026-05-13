@@ -25,11 +25,17 @@ btn.addEventListener("click",()=>{
 
 let addCart=document.getElementById("add-cart");
 addCart.addEventListener("click",()=>{
-fetch("/cart/add.js")
-method="post"
-headers={'content-type:'application/json''}
-body;json.stringfy({
-id:44995416719429})
+fetch("/cart/add.js",{
+method:"POST",
+
+header:{"content-type:"application/json""}
+body:json.stringify{
+id:44995416719429,
+quantity:1
+}
+
+})
+
 })
 
 
