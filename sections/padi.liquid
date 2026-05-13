@@ -10,7 +10,7 @@ btn.addEventListener("click",()=>{
     fetch("/cart.js")
     .then(respone =>{
     console.log("respone received");
-    respone.json()
+   return respone.json()
     } )
     .then(data =>{
         console.log(data);
