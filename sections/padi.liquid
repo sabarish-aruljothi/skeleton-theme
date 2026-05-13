@@ -6,7 +6,12 @@
 <script>
 let btn=document.getElementById("cart-btn");
 btn.addEventListener("click",()=>{
-console.log("button clicked")
+
+    fetch("/cart.js")
+    .then(respone =>{
+    console.log("respone received");
+    respone.json()
+    } )
 
 })
 
