@@ -6,13 +6,11 @@
 <script>
 let btn = document.getElementById("cart-btn");
 btn.addEventListener("click",e=>{
-    console.log("button cliscked");
-const response = await fetch('/cart.js')
-console.log(response)
-}
+
 
 })
-
+const response = await fetch('/cart.js')
+console.log(response)
 </script>    
 
 {% schema %}
