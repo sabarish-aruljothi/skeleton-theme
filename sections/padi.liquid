@@ -15,9 +15,9 @@ fetch("/cart.js")
 .then(respone => respone.json())
 .then(data =>{
   document.querySelector("h1").textContent = `Total_count:${data.item_count}`; 
-  console.log(data.item_count)} 
+  console.log(data.item_count)
 console.log(data.items)
-)
+})
   
 })
 
