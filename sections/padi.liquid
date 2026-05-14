@@ -25,12 +25,13 @@ fetch("/cart.js")
     total =total+element.quantity;
     if (element.line_price > lineItem) {
       
-      lineItem =element.product_title;
-      title= element.
+      lineItem =element.line_price;
+      title= element.product_title
     }
   })
   console.log(`The total is ${total}`)
-  console.log(lineItem)
+  console.log(lineItem);
+  console.log(title)
   });
 })
 
