@@ -20,11 +20,13 @@ fetch("/cart.js")
   // console.log(data.items)
   let total = 0;
   let lineItem=0
+  let title
   data.items.forEach(element => {
     total =total+element.quantity;
     if (element.line_price > lineItem) {
       
-      lineItem =element.line_price;
+      lineItem =element.product_title;
+      title= element.
     }
   })
   console.log(`The total is ${total}`)
