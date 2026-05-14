@@ -5,14 +5,16 @@
 
 
 {% javascript %}
-console.log("script loaded")
-// let cartData = document.getElementByClass("cart")
-// cartData.addEventListener("click",()=>{
-// fetch("/cart.js")
-// .then(response=>{return response.json})
-// .then{data=> console.log(data)}
+console.log("script loaded");
+let cartData = document.getElementByClass("cart")
+cartData.addEventListener("click",()=>{
+console.log("butn loaded")
 
-// })
+fetch("/cart.js")
+.then(response=>{return response.json})
+.then(data=> console.log(data))
+
+})
   
 {% endjavascript %}
 
