@@ -14,9 +14,10 @@ fetch("/cart.js")
 .then(response=>{return response.json()})
 .then(data=> {
   console.log(data);
-  console.log(data.item_count);
-  console.log(data.total_price);
-  console.log(data.items[0].product_title);
+  // console.log(data.item_count);
+  // console.log(data.total_price);
+  // console.log(data.items[0].product_title);
+  console.log(data.items)
 })
 
 })
