@@ -9,7 +9,7 @@
 let cartBtn= document.getElementById("cart-btn");
 cartBtn.addEventListener("click", ()=>{
 fetch("/cart.js")
-.then(respone => respone.json()),
+.then(respone => respone.json())
 .then(data => console.log(data) )
 })
 
