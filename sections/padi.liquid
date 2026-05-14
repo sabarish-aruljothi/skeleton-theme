@@ -2,6 +2,9 @@
 <button id="cart-btn">
   Get Cart
 </button>
+
+<h1>Total_count:</h1>
+
 <button id="add-cart">
   Add Product
 </button>
@@ -10,7 +13,7 @@ let cartBtn= document.getElementById("cart-btn");
 cartBtn.addEventListener("click", ()=>{
 fetch("/cart.js")
 .then(respone => respone.json())
-.then(data => console.log(data) )
+.then(data => console.log(data.item_count) )
 })
 
 
@@ -29,9 +32,9 @@ count:2
 .then(respone => respone.json())
 .then(data => console.log(data))
 .catch(error =>console.error(error))
-
-
 })
+
+
 </script>
 
 
