@@ -13,7 +13,9 @@ let cartBtn= document.getElementById("cart-btn");
 cartBtn.addEventListener("click", ()=>{
 fetch("/cart.js")
 .then(respone => respone.json())
-.then(data => console.log(data.item_count) )
+.then(data =>{
+  document.querySelector("h1").textContent = `Total_count:${data.item_count}`; 
+  console.log(data.item_count)} )
 })
 
 
