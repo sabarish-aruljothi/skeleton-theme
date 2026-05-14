@@ -23,6 +23,21 @@ console.log(data.items)
   
 })
 
+let clear= document.getElementById("clear");
+clear.addEventListener("click", ()=>{
+fetch("cart/change.js",{
+method:"POST",
+headers:{"Content-Type":"application/json"},
+body:JSON.stringify({
+id:"44995416719429:281460740a76a32ddd0860530820b53c" ,
+count:2
+})
+
+})
+.then(respone => respone.json())
+.then(data => console.log(data))
+.catch(error =>console.error(error))
+})
 
 let addCart = document.getElementById("add-cart")
 addCart.addEventListener("click",()=>{
