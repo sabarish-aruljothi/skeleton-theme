@@ -6,44 +6,12 @@
   Add Product
 </button>
 <script>
-let btn=document.getElementById("cart-btn");
-btn.addEventListener("click",()=>{
-
-    fetch("/cart.js")
-    .then(respone =>{
-    console.log("respone received");
-   return respone.json()
-    } )
-    .then(data =>{
-        console.log(data);
-        console.log(data.item_count)
-    })
-    .catch(error =>{
-    console.error(error)})
-
+let cartBtn= document.getElementById("cart-btn");
+cartBtn.addEventListener("click", ()=>{
+fetch("/cart.js")
+.then(respone => respone.json()),
+.then(data => console.log(data) )
 })
-
-let addCart=document.getElementById("add-cart");
-addCart.addEventListener("click",()=>{
-    console.log("button clicked")
-fetch("/cart/add.js",{
-method:"POST",
-
-headers:{"Content-Type":"application/json"},
-body:JSON.stringify({
-id:44995416719429,
-quantity:1
-})
-
-})
-.then(respone => respone.json())
-.catch(error => console.error(error))
-
-})
-
-
-
-
 
 </script>
 
