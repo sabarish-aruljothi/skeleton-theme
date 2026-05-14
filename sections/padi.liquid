@@ -20,7 +20,7 @@ fetch("/cart.js")
   // console.log(data.items)
   data.items.forEach(element => {
     let total = 0;
-    total =total.element.quantity;
+    total =total+element.quantity;
     console.log("total:" total)
     })
   });
