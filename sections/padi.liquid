@@ -19,7 +19,7 @@ fetch("/cart.js")
   // console.log(data.items[0].product_title);
   console.log(data.items)
   data.items.forEach(element => {
-    console.log(`${product_title} - ${quantity}`)
+    console.log(`${element.product_title} - ${element.quantity}`)
   });
 })
 
