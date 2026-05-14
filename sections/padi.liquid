@@ -13,6 +13,25 @@ fetch("/cart.js")
 .then(data => console.log(data) )
 })
 
+
+let addCart = document.getElementById("add-cart")
+addCart.addEventListener("click",()=>{
+
+fetch("cart/add.js",{
+method:"POST",
+"headers":"Content-Type":"application/json",
+body:JSON.stringify{
+id:44995416719429 ,
+count:2
+}
+.then(respone => respone.json())
+.then(data => console.log(data))
+.catch(error =>console.error(error))
+
+})
+
+
+})
 </script>
 
 
