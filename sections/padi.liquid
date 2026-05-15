@@ -1,4 +1,5 @@
 <button class="cart btn btn-primary">Get Cart Item</button>
+<button class="addCart btn btn-primary">Get Cart Item</button>
 
 
 
@@ -38,7 +39,23 @@ let  mostExpensive;
   });
 })
 
+let add=document.querySelector(".addCart")
+add.addEventListener("click",()=>{
+fetch("/cart/add.js",{
+  method:"POST",
+  headers:{"Content-Type":"application/json"},
+  body:JSON.stringify({
+    id:1,
+    quantity:2
+  })
 
+  .then(response=> response.json())
+  .then(data=>console.log(data))
+  .catch(error=>console.error(error);
+  )
+})
+
+})
   
 {% endjavascript %}
 
